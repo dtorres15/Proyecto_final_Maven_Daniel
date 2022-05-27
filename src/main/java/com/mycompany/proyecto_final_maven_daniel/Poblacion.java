@@ -9,6 +9,7 @@ package com.mycompany.proyecto_final_maven_daniel;
  * @author Daniel
  */
 public class Poblacion {
+
     private String nombre;
     private int edad;
     private Ciudad ciudad;
@@ -16,7 +17,7 @@ public class Poblacion {
     public Poblacion(String nombre, int edad, Ciudad ciudad) {
         this.nombre = nombre;
         this.edad = edad;
-        this.ciudad= ciudad;
+        this.ciudad = ciudad;
     }
 
     public void setNombre(String nombre) {
@@ -42,24 +43,15 @@ public class Poblacion {
     public Ciudad getCiudad() {
         return ciudad;
     }
-    
-    public int edadMediaCiudad(String nombreCiudad){
-        Ciudad ciudad= new Ciudad("Granada", 1500, 1750);
-        
-        Poblacion persona= new Poblacion("Ibai", 20, ciudad);
-        Poblacion persona1= new Poblacion("Paco", 42, ciudad);
-        Poblacion persona2= new Poblacion("Manuel", 80, ciudad);
-        Poblacion persona3= new Poblacion("Daniel", 22, ciudad);
-        
-        int media=0;
-        
-        if (nombreCiudad.equals(ciudad.getNombreCiudad())){
-            media= (persona.getEdad()+persona1.getEdad()+persona2.getEdad()+persona3.getEdad()) / 4 * 100;
-        }else {
-            media=0;
+
+    public double edadMediaCiudad(String nombreCiudad, Ciudad ciudad, Poblacion persona,Poblacion persona1,Poblacion persona2,Poblacion persona3) {
+        double media = 0;
+
+        if (nombreCiudad.equals(ciudad.getNombreCiudad())) {
+            media = (persona.getEdad() + persona1.getEdad() + persona2.getEdad() + persona3.getEdad()) / 4 ;
+        } else {
+            media = 0;
         }
         return media;
     }
-    
-    
 }
