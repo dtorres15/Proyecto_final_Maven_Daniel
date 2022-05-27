@@ -6,7 +6,7 @@ package com.mycompany.proyecto_final_maven_daniel;
 
 /**
  *
- * @author Javier
+ * @author Daniel
  */
 public class Poblacion {
     
